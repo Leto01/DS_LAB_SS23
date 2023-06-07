@@ -17,13 +17,18 @@ OPTIONAL:
 For customizing the api endpoints, you can add a .js file, that just needs the 
 same Name as the corosponding service-file. In this case it would look like this:
 
+On default, SAP CAP initializes a in memory db. In order to persist Data, there is a file for that:
+/DATABASE/my.db
+It is unused. I wanted to try something new, after working SAP CAP with a HANA DB and SQLite3 DB, i 
+wanted to use a Postgres DB. Works like a charm ;D
+    
 srv/
     myService.cds
     myService.js
 --------------------------------------------------------------------------------
 
 ## Getting Started with SAP CAP
-
+### File /SERVER/
 Welcome to your new project.
 
 It contains these folders and files, following our recommended project layout:
