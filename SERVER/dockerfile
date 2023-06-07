@@ -1,0 +1,16 @@
+FROM node:14-alpine
+
+# use productive environment
+ENV NODE_ENV development
+
+# copy source as node user
+WORKDIR /usr/src/app
+COPY --chown=node:node . .
+
+# install dependencies
+RUN npm ci --only=development
+
+# run app as node user
+EXPOSE 4004
+USER node
+CMD ["npm", "start"]
