@@ -1,16 +1,20 @@
-FROM node:14-alpine
+# Use a base image with Node.js pre-installed
+FROM node:lts
 
-# use productive environment
-ENV NODE_ENV development
-
-# copy source as node user
+# Set the working directory inside the container
 WORKDIR /usr/src/app
-COPY --chown=node:node . .
 
-# install dependencies
-RUN npm ci --only=development
+# Copy package.json and package-lock.json files
+COPY package*.json ./
 
-# run app as node user
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose any necessary ports (e.g., if your application runs on port 4005)
 EXPOSE 4004
-USER node
-CMD ["npm", "start"]
+
+# Define the command to start your application
+CMD [ "npm", "start" ]

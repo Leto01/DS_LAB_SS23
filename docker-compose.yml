@@ -8,8 +8,22 @@ services:
       POSTGRES_PASSWORD: "postgres"
     ports:
       - '5432:5432'
+    networks:
+      - ds-lab
   adminer:
     image: adminer
     restart: always
     ports:
       - 8080:8080
+    networks:
+      - ds-lab
+  backend:
+    image: cds-server
+    restart: always
+    ports: 
+      - 4004:4004
+    networks:
+      - ds-lab
+networks:
+  ds-lab:
+    driver: bridge
