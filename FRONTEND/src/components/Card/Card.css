@@ -1,9 +1,9 @@
-.Card{
+.Card {
     width: 100%;
     border: solid 1px #3333334d;
     background-color: #282828;
     border-radius: 16px;
-    padding: 8px;    
+    padding: 8px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -12,34 +12,37 @@
     margin-bottom: 24px;
 }
 
-.Card:hover{
+.Card:hover {
     box-shadow: -5px -5px 20px #282828, 5px 5px 20px #e7eb00;
 }
 
-.titleSection{
+.titleSection {
     width: 100%;
     display: grid;
     grid-auto-flow: column;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 16px;
     padding-bottom: 8px;
     align-items: center;
 }
 
-.editControls{
+.editControls {
     display: grid;
     grid-auto-flow: column;
     grid-gap: 8px;
 }
 
-.editControls svg:hover{
+.editControls svg:hover {
     color: #e7eb00;
     cursor: pointer;
 }
 
+.priority {
+   flex-grow: 10;
+}
 
 @media screen and (max-width: 768px) {
-    .editControls{
+    .editControls {
         grid-auto-flow: row;
     }
 }

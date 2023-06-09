@@ -27,6 +27,15 @@ const LandingPage = () => {
     }
   }, [selectedTask]);
 
+  const sortTasks = (a, b) => {
+    let fa = a.todo.toLowerCase(),
+        fb = b.todo.toLowerCase();
+    if (fa < fb) return -1;
+    if (fa > fb) return 1;
+    return 0;
+}
+
+
   const openCreateDialog = (e) => {
     e.preventDefault;
     resetSelectedItem();
@@ -42,7 +51,7 @@ const LandingPage = () => {
       .createTask(commitItem)
       .then((res) => {
         commitItem.ID = res.data.ID;
-        setTasks([...tasks, commitItem]);
+        setTasks([...tasks, commitItem].sort(sortTasks));
         setCreateTask(false);
       })
       .catch(console.warn);
@@ -109,7 +118,7 @@ const LandingPage = () => {
   useEffect(() => {
     todoService
       .getAll()
-      .then((res) => setTasks(res.data.value))
+      .then((res) => setTasks(res.data.value.sort(sortTasks)))
       .catch(console.warn);
   }, []);
 
