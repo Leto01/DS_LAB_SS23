@@ -7,23 +7,18 @@ const Card = ({ item, setId, setDelete, setUpdate }) => {
   return (
     <div className="Card">
       <div className="titleSection">
-          <h2 className="taskTitle">{item.todo}</h2>
+        <h2 className="taskTitle">{item.todo}</h2>
         <h4 className="priority">{item.priority}</h4>
         <div className="editControls">
-          <FontAwesomeIcon
-            icon={faPen}
-            onClick={() => {
-              setId(item.ID);
-              setUpdate(true);
-            }}
-          />
-          <FontAwesomeIcon
-            icon={faTrash}
-            onClick={() => {
-              setId(item.ID);
-              setDelete(true);
-            }}
-          />
+          <button onClick={() => {
+            setId(item.ID);
+            setUpdate(true);
+          }}>EDIT TASK</button>
+          <button onClick={() => {
+            setId(item.ID);
+            setDelete(true);
+          }}>DONE</button>
+
         </div>
       </div>
     </div>
