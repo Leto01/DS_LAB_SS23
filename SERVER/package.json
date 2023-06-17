@@ -15,8 +15,7 @@
     "sqlite3": "^5.1.6"
   },
   "scripts": {
-    "deploy": "npx cds-dbm deploy --create-db",
-    "start": "cds serve"
+    "start": "cds-serve"
   },
   "engines": {
     "node": "^16.15"
