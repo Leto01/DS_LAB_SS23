@@ -3,28 +3,28 @@
 This project is a test on how fast you can build an API 
 connected to an postgres DB running in a Docker-Continer.
 
-# Start it up
+# Start it up<br>
 
-In order to start this project, clone this project, navigate into the Root-folder 
-and run **Terminal** docker compose up
+In order to start this project, clone this project, navigate into the Root-folder <br>
+and run **Terminal** docker compose up<br>
+<br>
+This will pull the images stored on my docker hub and start up the application.<br>
+The frontend is reachable under http://localhost:5173<br><br>
 
-This will pull the images stored on my docker hub and start up the application.
-The frontend is reachable under http://localhost:5173
-
-If you want to build the images on your own, run these commands:
-**Terminal**DS_LAB_SS23>DATABASE> docker build -t <imagename_DATABASE> .
-**Terminal**DS_LAB_SS23>SERVER> docker build -t <imagename_SERVER> .
-**Terminal**DS_LAB_SS23>FRONTEND> docker build -t <imagename_FRONTEND> .
-
-then change the docker-compose.yml in the root folder, and change the used images to your localy build images.
+If you want to build the images on your own, run these commands:<br>
+**Terminal**DS_LAB_SS23>DATABASE> docker build -t <imagename_DATABASE> .<br>
+**Terminal**DS_LAB_SS23>SERVER> docker build -t <imagename_SERVER> .<br>
+**Terminal**DS_LAB_SS23>FRONTEND> docker build -t <imagename_FRONTEND> .<br>
+<br>
+then change the docker-compose.yml in the root folder, and change the used images to your localy build images.<br>
 
 ## Build process:
 
-Initialize Project: **Terminal** > cds init <projectName>
-Move into db/ Folder: add Models.cds file, define namespace and entities.
-Move into srv/ folder: add myService.cds file, define service with path.
-First start of application: **Terminal** > cds watch
-Note that you can not start the application without a service and a entity.
+Initialize Project: **Terminal** > cds init <projectName> <br>
+Move into db/ Folder: add Models.cds file, define namespace and entities.<br>
+Move into srv/ folder: add myService.cds file, define service with path.<br>
+First start of application: **Terminal** > cds watch<br>
+Note that you can not start the application without a service and a entity.<br>
 
 
 OPTIONAL:
