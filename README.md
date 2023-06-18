@@ -3,6 +3,20 @@
 This project is a test on how fast you can build an API 
 connected to an postgres DB running in a Docker-Continer.
 
+# Start it up
+
+In order to start this project, clone this project, navigate into the Root-folder 
+and run **Terminal** docker compose up
+
+This will pull the images stored on my docker hub and start up the application.
+The frontend is reachable under http://localhost:5173
+
+If you want to build the images on your own, run these commands:
+**Terminal**DS_LAB_SS23>DATABASE> docker build -t <imagename_DATABASE> .
+**Terminal**DS_LAB_SS23>SERVER> docker build -t <imagename_SERVER> .
+**Terminal**DS_LAB_SS23>FRONTEND> docker build -t <imagename_FRONTEND> .
+
+then change the docker-compose.yml in the root folder, and change the used images to your localy build images.
 
 ## Build process:
 
