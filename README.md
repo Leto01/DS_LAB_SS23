@@ -12,9 +12,9 @@ This will pull the images stored on my docker hub and start up the application.<
 The frontend is reachable under http://localhost:5173<br><br>
 
 If you want to build the images on your own, run these commands:<br>
-**Terminal**DS_LAB_SS23>DATABASE> docker build -t <imagename_DATABASE> .<br>
-**Terminal**DS_LAB_SS23>SERVER> docker build -t <imagename_SERVER> .<br>
-**Terminal**DS_LAB_SS23>FRONTEND> docker build -t <imagename_FRONTEND> .<br>
+DS_LAB_SS23>DATABASE> docker build -t <imagename_DATABASE> .<br>
+DS_LAB_SS23>SERVER> docker build -t <imagename_SERVER> .<br>
+`DS_LAB_SS23>FRONTEND> docker build -t <imagename_FRONTEND> .`<br>
 <br>
 then change the docker-compose.yml in the root folder, and change the used images to your localy build images.<br>
 
