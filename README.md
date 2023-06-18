@@ -6,14 +6,14 @@ connected to an postgres DB running in a Docker-Continer.
 # Start it up<br>
 
 In order to start this project, clone this project, navigate into the Root-folder <br>
-and run **Terminal** docker compose up<br>
+and run `docker compose up`<br>
 <br>
 This will pull the images stored on my docker hub and start up the application.<br>
-The frontend is reachable under http://localhost:5173<br><br>
+The frontend is reachable under `http://localhost:5173`<br><br>
 
 If you want to build the images on your own, run these commands:<br>
-DS_LAB_SS23>DATABASE> docker build -t <imagename_DATABASE> .<br>
-DS_LAB_SS23>SERVER> docker build -t <imagename_SERVER> .<br>
+`DS_LAB_SS23>DATABASE> docker build -t <imagename_DATABASE> .`<br>
+`DS_LAB_SS23>SERVER> docker build -t <imagename_SERVER> .`<br>
 `DS_LAB_SS23>FRONTEND> docker build -t <imagename_FRONTEND> .`<br>
 <br>
 then change the docker-compose.yml in the root folder, and change the used images to your localy build images.<br>
