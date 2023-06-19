@@ -1,7 +1,8 @@
+version: '3.1'
+
 services:
   db:
-    image: postgresdb
-    build: ./DATABASE/
+    image: leziit00/postgresdb:latest
     restart: always
     environment:
       POSTGRES_PASSWORD: "postgres"
@@ -10,8 +11,7 @@ services:
     networks:
       - ds-lab
   backend:
-    image: cds-server
-    build: ./SERVER/
+    image: leziit00/cds-server:latest
     restart: always
     ports: 
       - 4004:4004
@@ -19,9 +19,6 @@ services:
       - ds-lab
   frontend:
     image: todo-app
-    build: ./FRONTEND/
-    env_file:
-      - ./FRONTEND/.env
     restart: always
     ports: 
       - 5173:5173
@@ -30,3 +27,5 @@ services:
 networks:
   ds-lab:
     driver: bridge
+
+    version: '3.1'

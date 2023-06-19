@@ -5,18 +5,12 @@ connected to an postgres DB running in a Docker-Continer.
 
 # Start it up<br>
 
-In order to start this project, clone this project, navigate into the Root-folder <br>
-and run `docker compose up`<br>
+Clone this project into your desired location. **Make sure there are no spaces in the filepath to the root folder of this project**.<br>
+Navigate into the Root-folder and run `docker compose up`<br>
 <br>
-This will pull the images stored on my docker hub and start up the application.<br>
+This will build the images according to the dockerfiles.<br>
 The frontend is reachable under `http://localhost:5173`<br><br>
-
-If you want to build the images on your own, run these commands:<br>
-`DS_LAB_SS23>DATABASE> docker build -t <imagename_DATABASE> .`<br>
-`DS_LAB_SS23>SERVER> docker build -t <imagename_SERVER> .`<br>
-`DS_LAB_SS23>FRONTEND> docker build -t <imagename_FRONTEND> .`<br>
 <br>
-then change the docker-compose.yml in the root folder, and change the used images to your localy build images.<br>
 
 ## Build process:
 
@@ -25,7 +19,6 @@ Move into db/ Folder: add Models.cds file, define namespace and entities.<br>
 Move into srv/ folder: add myService.cds file, define service with path.<br>
 First start of application: **Terminal** > cds watch<br>
 Note that you can not start the application without a service and a entity.<br>
-
 
 OPTIONAL:
 For customizing the api endpoints, you can add a .js file, that just needs the 

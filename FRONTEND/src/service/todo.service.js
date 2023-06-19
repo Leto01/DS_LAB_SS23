@@ -1,6 +1,6 @@
 import { getApiService } from "./api.service";
 
-const service = getApiService('/task');
+const service = getApiService("/task");//process.env.ENTITY_TASK_PATH);
 
 export const todoService = {
     createTask(data){

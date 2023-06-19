@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const SERVER_URL = "http://localhost:4004";
-const API_URL = SERVER_URL + "/api";
+const SERVER_URL = "http://localhost:4004";//process.env.SERVICE_URL;
+const API_URL = SERVER_URL + "/api"//process.env.API_PATH;
 let pathExtension = 'none';
 const throwRequestError= (err)=>{
     console.warn("Error detected on apiService: " + pathExtension);
